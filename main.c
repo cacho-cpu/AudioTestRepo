@@ -19,10 +19,10 @@ int main(int argc, char const *argv[])
     uint32_t count_of_sounds;
     fread(&count_of_sounds, sizeof(uint32_t), 1, archivo);
 
-    uint32_t* sample_rates = malloc(sizeof(uint32_t) * count_of_sounds);
-    uint32_t* sample_counts = malloc(sizeof(uint32_t) * count_of_sounds);
+    uint32_t * sample_rates = malloc(sizeof(uint32_t) * count_of_sounds);
+    uint32_t * sample_counts = malloc(sizeof(uint32_t) * count_of_sounds);
     char(*sound_names)[Nombre] = malloc(sizeof(char[Nombre]) * count_of_sounds);
-    float** samples = malloc(sizeof(float*) * count_of_sounds);
+    float ** samples = malloc(sizeof(float*) * count_of_sounds);
 
 
     if (!sample_rates || !sample_counts || !sound_names || !samples) {
@@ -84,7 +84,7 @@ int main(int argc, char const *argv[])
     }else
     {
         int accion;
-        printf("Que queres hacer \n1) reproducir \n2) guardar en el archivo.raw");
+        printf("Que queres hacer \n1) reproducir \n2) guardar en el archivo.raw ");
         scanf("%d", &accion);
         if (accion == 1)
         {
